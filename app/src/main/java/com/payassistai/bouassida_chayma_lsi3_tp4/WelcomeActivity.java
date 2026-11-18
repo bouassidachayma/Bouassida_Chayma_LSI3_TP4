@@ -1,7 +1,7 @@
 package com.payassistai.bouassida_chayma_lsi3_tp4;
 
 import android.os.Bundle;
-
+import android.widget.TextView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -9,16 +9,25 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class WelcomeActivity extends AppCompatActivity {
-
+    TextView txtWelcome;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
+
         setContentView(R.layout.activity_welcome);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        //Initialisation du TextView
+        txtWelcome = findViewById(R.id.textWelcome);
+
+        // Récupération de l’intent et des extras
+        String nom = getIntent().getStringExtra("name");
+        String prenom = getIntent().getStringExtra("lastname");
+        String mail = getIntent().getStringExtra("mymail");
+
+        //  Affichage du message personnalisé
+        String message = "Bienvenue " + nom + " " + prenom + ",\n"
+                + "c’est la deuxième activité.\n"
+                + "Vous serez bientôt contacté sur : " + mail + " ";
+
+        txtWelcome.setText(message);
     }
 }
