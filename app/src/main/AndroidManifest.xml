@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.payassistai.bouassida_chayma_lsi3_tp4">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -13,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Bouassida_Chayma_LSI3_TP4">
         <activity
-            android:name=".WelcomeActivity"
+            android:name="com.payassistai.bouassida_chayma_lsi3_tp4.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.payassistai.bouassida_chayma_lsi3_tp4.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
