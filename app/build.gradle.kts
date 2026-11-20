@@ -4,16 +4,12 @@ plugins {
 
 android {
     namespace = "com.payassistai.bouassida_chayma_lsi3_tp4"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.payassistai.bouassida_chayma_lsi3_tp4"
         minSdk = 24
-        targetSdk = 36
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
